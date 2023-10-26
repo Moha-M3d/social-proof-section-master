@@ -1,0 +1,237 @@
+:root {
+
+    /* Primary */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);
+
+    /* Neutral */
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Font */
+    --main-font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+
+*, 
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+/* Simple img Initialisation */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Small Screens */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+    }
+}
+
+body {
+    background-color: var(--white);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 30px 20px;
+    font-family: var(--main-font-family);
+    color: var(--very-dark-magenta);   
+    line-height: 1.5;
+}
+
+.container .row {
+    display: flex;
+}
+
+.container .first-row {
+    margin-bottom: 60px;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(/images/bg-pattern-top-desktop.svg);
+    background-size: cover;
+}
+
+@media (max-width: 767px) {
+    .container .first-row {
+        background-image: url(/images/bg-pattern-top-mobile.svg);
+    }
+}
+
+.container .first-row  .first-col {
+    flex: 0 0 calc(100% - 500px - 10%);
+}
+
+.container .first-row  .second-col {
+    flex: 0 0 500px;
+}
+
+.first-row .first-col h2 {
+    font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.first-row .second-col {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.first-row .second-col .review-row {
+    display: flex;
+    width: calc(100% - 100px);
+    gap: 20px;
+    padding: 15px 20px;
+    background-color: var(--light-grayish-magenta);
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.first-row .second-col .review-row:first-child {
+align-self: flex-start;
+}
+
+.first-row .second-col .review-row:nth-child(2) {
+    align-self: center;
+}
+
+.first-row .second-col .review-row:nth-child(3) {
+    align-self: flex-end;   
+}
+
+
+.first-row .second-col .review-row .star-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.first-row .second-col .review-row .star-icons img {
+    width: 13px;
+    height: 13px;
+}
+
+@media (max-width: 767px) {
+    .container .first-row {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .container .first-row  .first-col {
+        margin-bottom: 40px;
+    }
+    
+    .container .first-row  .second-col {
+        display: block;
+    }
+
+    .first-row .second-col .review-row {
+        width: 100%;
+        margin-bottom: 15px;
+        gap: 4px;
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+/* Second Row */
+.second-row {
+    gap: 20px;
+    min-height: 250px;
+    background-image: url(/images/bg-pattern-bottom-desktop.svg);
+    background-size: cover;
+}
+
+@media (max-width: 991px) {
+    .second-row {
+        min-height: 300px;
+        background-image: url(/images/bg-pattern-bottom-mobile.svg);
+    }
+}
+
+.second-row .card:first-child {
+    align-self: flex-start;
+}
+
+.second-row .card:nth-child(2) {
+    align-self: center;
+}
+
+.second-row .card:nth-child(3) {
+    align-self: flex-end;
+}
+
+.second-row .card {
+    padding: 40px 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    background-color: var(--very-dark-magenta);
+    color: var(--white);
+}
+
+.second-row .card .buyer-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.second-row .card .buyer-info .buyer-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.second-row .card .buyer-info .buyer-details {
+    display: flex;
+    flex-flow: column nowrap;
+} 
+
+.second-row .card .buyer-info .buyer-details .name {
+    font-weight: 700;
+}
+
+.second-row .card .buyer-info .buyer-details .state {
+    font-weight: 600;
+    color: var(--soft-pink)
+}
+
+.second-row .card p {
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .container .second-row {
+        display: block;
+    }
+
+    .container .card {
+        margin-bottom: 15px;
+    }
+}
