@@ -66,7 +66,7 @@ body {
 }
 
 .container .first-row {
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     justify-content: space-between;
     align-items: center;
     background-image: url(/images/bg-pattern-top-desktop.svg);
@@ -80,7 +80,7 @@ body {
 }
 
 .container .first-row  .first-col {
-    flex: 0 0 calc(100% - 500px - 10%);
+    flex: 0 0 calc(100% - 500px - 20%);
 }
 
 .container .first-row  .second-col {
@@ -88,10 +88,14 @@ body {
 }
 
 .first-row .first-col h2 {
-    font-size: 2.8em;
+    font-size: 3.5em;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 20px;
+}
+
+.first-row .first-col p {
+    font-size: 1.2em;
 }
 
 .first-row .second-col {
@@ -105,7 +109,7 @@ body {
     display: flex;
     width: calc(100% - 100px);
     gap: 20px;
-    padding: 15px 20px;
+    padding: 20px 30px;
     background-color: var(--light-grayish-magenta);
     border-radius: 7px;
     font-weight: 700;
@@ -187,7 +191,7 @@ align-self: flex-start;
 }
 
 .second-row .card {
-    padding: 40px 30px;
+    padding: 25px 20px;
     border-radius: 5px;
     display: flex;
     flex-flow: column nowrap;
