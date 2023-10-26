@@ -187,7 +187,7 @@ align-self: flex-start;
 }
 
 .second-row .card {
-    padding: 40px 30px;
+    padding: 25px 20px;
     border-radius: 5px;
     display: flex;
     flex-flow: column nowrap;
